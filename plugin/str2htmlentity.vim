@@ -32,6 +32,11 @@
 " vmap <silent> sr :Entity2HtmlString<cr>
 "
 
+if exists('g:loaded_str2htmlentity')
+  finish
+endif
+let g:loaded_str2htmlentity = 1
+
 function! s:char2entity(str)
   let result = a:str
   if a:str ==? '<'
