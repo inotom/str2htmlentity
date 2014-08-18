@@ -1,8 +1,8 @@
 " str2htmlentity.vim
 "
 " file created in 2008/11/07 20:52:40.
-" LastUpdated :2014/08/18 09:47:27.
-" Author: iNo
+" LastUpdated :2014/08/18 09:58:06.
+" Author: iNo <wdf7322@yahoo.co.jp>
 " Version: 1.1
 " License: MIT License {{{
 "   Permission is hereby granted, free of charge, to any person obtaining
