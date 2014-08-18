@@ -1,7 +1,7 @@
 " str2htmlentity.vim
 "
 " file created in 2008/11/07 20:52:40.
-" LastUpdated :2014/08/18 09:45:29.
+" LastUpdated :2014/08/18 09:47:27.
 " Author: iNo
 " Version: 1.1
 " License: MIT License {{{
@@ -36,6 +36,10 @@ if exists('g:loaded_str2htmlentity')
   finish
 endif
 let g:loaded_str2htmlentity = 1
+
+let s:save_cpo = &cpo
+set cpo&vim
+
 
 function! s:char2entity(str)
   let result = a:str
@@ -76,5 +80,9 @@ endfunction
 " for range command
 command! -range Str2HtmlEntity :<line1>,<line2>call s:range2HtmlEntity()
 command! -range Entity2HtmlString :<line1>,<line2>call s:range2HtmlString()
+
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
 
 " vim:fdl=0 fdm=marker:ts=2 sw=2 sts=0:
