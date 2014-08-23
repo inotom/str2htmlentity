@@ -1,7 +1,7 @@
 " str2htmlentity.vim
 "
 " file created in 2008/11/07 20:52:40.
-" LastUpdated :2014/08/18 09:58:06.
+" LastUpdated :2014/08/23 11:58:47.
 " Author: iNo <wdf7322@yahoo.co.jp>
 " Version: 1.1
 " License: MIT License {{{
@@ -70,11 +70,11 @@ function! s:entity2char(str)
 endfunction
 
 function! s:range2HtmlEntity() range
-  silent execute "normal! gv:s/\\%V[\&<>\"]/\\= s:char2entity(submatch(0)) /g\<CR>"
+  silent! execute "normal! gv:s/\\%V[\&<>\"]/\\= s:char2entity(submatch(0)) /g\<CR>"
 endfunction
 
 function! s:range2HtmlString() range
-  silent execute "normal! gv:s/\\%V\&[^;#]\\+;/\\= s:entity2char(submatch(0)) /g\<CR>"
+  silent! execute "normal! gv:s/\\%V\&[^;#]\\+;/\\= s:entity2char(submatch(0)) /g\<CR>"
 endfunction
 
 " for range command
